@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>LISTAGEM DE JOGOS</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <div class="container">
+        <h1>LISTA DE JOGOS</h1>
+
+        <table class="tabela-jogos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>PLATAFORMA</th>
+                    <th>ZEROU?</th>
+                    <th colspan="2">AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="jog : ${jogos}">
+                    <td th:text="${jog.id}"></td>
+                    <td th:text="${jog.nome}"></td>
+                    <td th:text="${jog.plataforma}"></td>
+                    <td th:text="${jog.zerado ? 'Sim' : 'Não'}"></td>
+                    <td>
+                        <a th:href="${'/editar/' + jog.id}" class="botao">Editar</a>
+                    </td>
+                    <td>
+                        <form th:action="${'/deletar/' + jog.id}" method="post" style="margin:0;">
+                            <input type="submit" value="Deletar" class="botao botao-deletar">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <a th:href="@{/}" class="botao link-voltar">Voltar para a Página Inicial</a>
+    </div>
+</body>
+</html>

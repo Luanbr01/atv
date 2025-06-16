@@ -1,0 +1,131 @@
+/* Estilos Gerais */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    background-image: url('../img/capa.jpg'); /* Altere para o nome do seu arquivo */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container Principal para Centralização */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #005f73;
+    margin-bottom: 40px;
+}
+
+/* Estilo para Links e Botões */
+.botao {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0a9396;
+    border: none;
+    border-radius: 25px; /* Botões arredondados */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+}
+
+.botao:hover {
+    background-color: #005f73;
+    transform: translateY(-2px);
+}
+
+/* Estilo para o menu da Index */
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 15px;
+}
+
+/* Estilos para Formulários */
+.formulario {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os elementos do formulário */
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+}
+
+.formulario label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formulario input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.formulario .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilos para a Tabela */
+.tabela-jogos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden; /* Garante que o border-radius seja aplicado nas células */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-jogos th, .tabela-jogos td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-jogos th {
+    background-color: #e9ecef;
+    font-size: 1.1rem;
+    color: #343a40;
+}
+
+/* Botão de Deletar (menor) */
+.botao-deletar {
+    padding: 8px 15px;
+    background-color: #ae2012;
+    font-size: 0.9rem;
+}
+
+.botao-deletar:hover {
+    background-color: #9b2226;
+}
+
+/* Link de Voltar */
+.link-voltar {
+    margin-top: 30px;
+}
