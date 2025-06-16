@@ -34,7 +34,6 @@ public class MainController {
 
     @GetMapping("/formulario")
     public String form(Model model){
-        //QUERO UM CLIENTE VAZIO NA INICIALIZACAO DO FORM
         model.addAttribute("jogos", new Jogos());
         model.addAttribute("titulo", "CADASTRO DE JOGOS");
         model.addAttribute("link", "/cadastro");

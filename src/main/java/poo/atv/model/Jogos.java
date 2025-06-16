@@ -61,7 +61,7 @@ public class Jogos {
     }
 
     public static Jogos converter (Map<String,Object> registro){
-        int id = (int) registro.get("id"); //Downcast
+        int id = (int) registro.get("id");
         String nome = (String) registro.get("nome");
         String plataforma = (String) registro.get("plataforma");
         Object zeradoObj = registro.get("zerado");
@@ -71,7 +71,7 @@ public class Jogos {
         } else if (zeradoObj instanceof Number) { 
             zerado = ((Number) zeradoObj).intValue() == 1;
         } else if (zeradoObj instanceof String) { 
-            zerado = Boolean.parseBoolean((String) zeradoObj);
+            zerado = Boolean.parseBoolean((String) zeradoObj); 
         }
 
         return new Jogos(id, nome, plataforma, zerado);

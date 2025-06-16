@@ -10,14 +10,14 @@
 
         <form class="formulario" th:action="@{${link}}" method="POST" th:object="${jogos}">
             
-            <label for="nome">Nome:</label>
+            <label for="nome">Nome do jogo:</label>
             <input type="text" id="nome" th:field="*{nome}" />
 
             <label for="plataforma">Plataforma:</label>
             <input type="text" id="plataforma" th:field="*{plataforma}" />
 
             <div>
-                <label>Zerado:</label>
+                <label>Foi zerado?:</label>
                 <div class="radio-group">
                     <input type="radio" id="zeradoSim" th:field="*{zerado}" value="true" />
                     <label for="zeradoSim">Sim</label>

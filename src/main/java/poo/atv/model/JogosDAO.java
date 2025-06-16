@@ -28,7 +28,7 @@ public class JogosDAO {
 
     public void inserirJogos(Jogos jog){
         String sql = "INSERT INTO jogos(nome,plataforma,zerado) VALUES(?,?,?)";
-        Object[] parametros = new Object[3]; //Um para cada ?
+        Object[] parametros = new Object[3]; 
         parametros[0] = jog.getNome();
         parametros[1] = jog.getPlataforma();
         parametros[2] = jog.isZerado();
