@@ -27,11 +27,6 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/sucesso")
-    public String sucesso(){
-        return "sucesso";
-    }
-
     @GetMapping("/formulario")
     public String form(Model model){
         model.addAttribute("jogos", new Jogos());
